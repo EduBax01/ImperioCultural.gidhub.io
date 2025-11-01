@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Imperio Cultural</title>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+        
+        <a href="#inicio">
+             <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\piramide.png" alt="logotipo principal" width="50" height="50" style="margin-right: 20px;">
+        </a>
+
+        <div style="flex-grow: 1; max-width: 600px; margin: 0 20px;">
+            <input type="search" placeholder="Buscar..." style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <nav style="display: flex; gap: 15px;">
+            <a href="#tienda">
+                <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\carrito.png" alt="Tienda" width="30" height="30">
+            </a>
+            
+            <a href="#oferta">
+                <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\oferta.png" alt="Perfil" width="30" height="30">
+            </a>
+        </nav>
+        
+    </div>
+</header>
+
+<nav class="tabs-container">
+    
+    <a href="#ropa-del-mes" class="tab-button tab-ropa active" id="tabRopa">
+        <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\laundry.png" alt="Icono Ropa" class="tab-icon">
+        Ropa del Mes
+    </a>
+    
+    <a href="#accesorios" class="tab-button tab-accesorios" id="tabAccesorios">
+        <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\star.png" alt="Icono Accesorios" class="tab-icon">
+        Accesorios
+    </a>
+    
+    <a href="#articulos" class="tab-button tab-articulos" id="tabArticulos">
+        <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\propaganda.png" alt="Icono Artículos" class="tab-icon">
+        Artículos
+    </a>
+    
+    <a href="#contactos" class="tab-button tab-contactos" id="tabContactos">
+        <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\phone.png" alt="Icono Contactos" class="tab-icon">
+        Contactos
+    </a>
+    
+</nav>
+
+<section class="intro-boutique">
+    <div class="intro-texto-contenedor">
+        <div class="intro-texto-caja-negra">
+            <h1 class="titulo-moderno">El Alma de México Hecha Vestido.</h1>
+            <p class="parrafo-moderno">
+                En **Imperio Cultural**, cada hilo es un eco de la historia y cada bordado un mapa de la identidad mexicana. No somos solo una boutique de ropa; somos un puente entre el pasado artesanal y el estilo contemporáneo. Descubre prendas tradicionales, elaboradas con amor y respeto por manos mexicanas. Viste una obra de arte, viste el legado de un **Imperio Cultural**.
+            </p>
+            <a href="#galeria" class="btn-coleccion">Explora la Colección</a>
+        </div>
+    </div>
+    <div class="intro-imagen-contenedor">
+        <img src="resources/image.jpg" alt="Modelo vistiendo ropa tradicional mexicana de Imperio Cultural" class="imagen-boutique">
+    </div>
+</section>
+
+<div class="secciones-pre-main">
+
+
+<section id="contacto">
+    <h2>Sección de Contacto y Destacados</h2>
+    
+    <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+        
+        <div class="cuadro-personalizado">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\bolsa.png" alt="Tienda" width="50" height="50">
+            <span class="titulo-negro">Tienda</span>
+            <p>¡Explora nuestro catálogo completo aquí!</p>
+        </div>
+
+        <div class="cuadro-personalizado">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\oferta.png" alt="Tienda" width="50" height="50">
+            <span class="titulo-negro">Ofertas</span>
+            <p>Descubre los descuentos y promociones del mes.</p>
+        </div>
+        
+    </div>
+    
+</section>
+
+</div>
+    
+    <main>
+    <h2>Contenido Principal de la Página</h2>
+    
+    <section id="slider">
+        <h3>Slider Promocional</h3>
+        <div>
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\1.jpg" alt="Producto destacado 1" width="300" height="200">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\2.jpg" height="200">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\3.jpg" height="200">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\4.jfif" height="200">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\5.png" height="200">
+        </div>
+    </section>
+
+    <hr>
+    
+    <section id="acciones">
+        <h3>Acciones Rápidas</h3>
+        <nav>
+            <a href="#comprar_producto">
+                <button>COMPRAR AHORA</button>
+            </a>
+            
+            <span>|</span> 
+            
+            <a href="#formulario_resena">
+                <button>RESEÑAR PRODUCTO</button>
+            </a>
+        </nav>
+    </section>
+
+    <hr>
+
+<section id="galeria">
+    <h3>Galería de Productos</h3>
+    <div class="galeria-contenedor">
+        
+        <a href="#modal-popup" 
+           data-img-src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\1.jpg"
+           data-titulo="Vestido Floreado 'Sunshine'"
+           data-descripcion="Vestido de algodón ligero, ideal para paseos veraniegos.">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\1.jpg" alt="Vestido Floreado" width="250" height="250">
+        </a>
+        
+        <a href="#modal-popup" 
+           data-img-src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\2.jpg"
+           data-titulo="Bolso de Cuero 'Elegance'"
+           data-descripcion="Bolso de mano de cuero genuino, color negro. Incluye correa ajustable.">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\2.jpg" alt="Bolso de Cuero" width="250" height="250">
+        </a>
+
+        <a href="#modal-popup" 
+           data-img-src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\3.jpg"
+           data-titulo="Tenis Blancos 'AirRun'"
+           data-descripcion="Zapatos deportivos ultraligeros con suela de gel. Números del 23 al 27.">
+            <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Boutique\3.jpg" alt="Zapatos Deportivos" width="250" height="250">
+        </a>
+        
+        </div>
+</section>
+
+<div id="modal-popup" class="modal">
+    <a href="#" class="cerrar">&times;</a>
+    
+    <div class="modal-contenido">
+        <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\laundry.png" width="55" height="55" class="popup-imagen-estatica">
+        
+        <h2>Detalle del Producto</h2>
+        
+        <p>
+            una vestimetna perfecto para la temporar de muertos, con colores llamativos y diseño armonioso
+            para los amantes de la cultura mexicana
+        </p>
+        
+        <div class="modal-acciones">
+            <button class="btn-comprar">Comprar Ahora</button>
+            <button class="btn-apartar">Apartar</button>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer>
+    <hr> 
+
+    <div class="logotipo">
+    <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\piramide.png" alt="logotipo principal" width="90" height="90" style="margin-right: 10px;">
+    </div>
+
+ <div>
+        <h3>Nuestras Redes Sociales</h3>
+        
+        <p>
+            <a href="URL_DE_TU_FACEBOOK" target="_blank">
+                <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\face.png" alt="logotipo principal" width="30" height="30" alt="Facebook">
+            </a>
+            
+            |
+            
+            <a href="URL_DE_TU_TWITTER" target="_blank">
+                <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\tiktok.png" alt="logotipo principal" width="30" height="30" alt="Tiktok">
+            </a>
+            
+            |
+            
+            <a href="URL_DE_TU_INSTAGRAM" target="_blank">
+                <img src="C:\Users\ICOLAB2-PC02\Documents\Test\Resources\Icons\insta.png" alt="logotipo principal" width="30" height="30" alt="instagram">
+            </a>
+        </p>
+   
+    </div>
+
+    <div>
+        <p>
+            &copy; 2025 Derechos de Autor.
+            <br>
+            Desarrollado por **Xailly Ruby**.
+        </p>
+    </div>
+    
+   
+    
+</footer>
+</body>
+</html>

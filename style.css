@@ -1,0 +1,836 @@
+body {
+    /* Fondo morado con degradado rosa */
+    background: #FFFFFF; /* De un morado a un rosa vibrante */
+    color: #FFFFFF; /* Color de texto blanco por defecto */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(#770d1e, #7a0a3a); /* Negro a gris oscuro a azul claro */
+    padding: 30px;
+    border-bottom: 1px solid #eee; /* Opcional: una línea sutil abajo */
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre el logo, la búsqueda y los íconos de navegación */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px;
+    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes (opcional) */
+    margin: 0 auto; /* Centra el contenedor en la página (opcional, si se usa max-width) */
+}
+
+.header-logo-link img {
+    margin-right: 20px;
+}
+
+
+.header-search-container {
+    flex-grow: 5; /* Permite que tome el espacio disponible */
+    max-width: 600px; /* Limita el ancho máximo de la barra de búsqueda */
+    margin: 0 50px; /* Espacio a los lados del input */
+}
+
+.header-search-container input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border: px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    font-size: 16px; /* Opcional: para mejor legibilidad */
+}
+
+
+.header-nav {
+    display: flex;
+    gap: 15px; /* Espacio entre los íconos de navegación */
+}
+
+
+.header-nav a {
+    text-decoration: none; /* Elimina el subrayado si hubiera texto */
+    /* El tamaño de la imagen se mantiene en el HTML o se define aquí si se prefiere */
+}
+
+.header-nav img {
+    display: block; /* Ayuda a asegurar que no haya espacio extra debajo de la imagen */
+}
+
+.intro-boutique {
+    display: flex;
+    max-width: 1200px; /* Ancho máximo para centrar el contenido */
+    margin: 50px auto; /* Margen superior/inferior y centrado */
+    align-items: stretch; /* Asegura que los hijos ocupen la altura completa */
+    min-height: 500px; /* Altura mínima para el bloque */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra sutil de boutique */
+}
+
+/* --- Contenedor de la Imagen (Ocupa la mitad del espacio) --- */
+.intro-imagen-contenedor {
+    flex: 1; /* Ocupa la mitad del espacio */
+    overflow: hidden; /* Importante para que la imagen no se salga */
+}
+
+.imagen-boutique {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    display: block;
+    transition: transform 0.5s ease; /* Efecto hover moderno */
+}
+
+.imagen-boutique:hover {
+    transform: scale(1.05);
+}
+
+/* --- Contenedor del Texto (Ocupa la otra mitad) --- */
+.intro-texto-contenedor {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    display: flex; /* Para centrar la caja negra verticalmente */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal (opcional) */
+    padding: 20px; /* Padding interno */
+}
+
+/* --- La Caja Negra del Texto (El estilo principal) --- */
+.intro-texto-caja-negra {
+    background-color: #1a1a1a; /* Negro profundo para el estilo moderno */
+    color: #ffffff; /* Texto blanco */
+    padding: 40px;
+    max-width: 450px; /* Ancho limitado para mejor lectura */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Sombra para resaltar la caja */
+}
+
+/* --- Estilos de Tipografía --- */
+.titulo-moderno {
+    font-size: 2.2em;
+    font-weight: 700; /* Negrita */
+    letter-spacing: 2px; /* Espaciado moderno */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e0b06b; /* Línea de acento dorado/cobre */
+    padding-bottom: 10px;
+}
+
+.parrafo-moderno {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-weight: 300; /* Texto ligero para contraste */
+}
+
+/* --- Botón (Estilo de llamado a la acción) --- */
+.btn-coleccion {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #e0b06b; /* Borde de acento */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-coleccion:hover {
+    background-color: #e0b06b; /* Relleno al pasar el ratón */
+    color: #1a1a1a;
+    transform: translateY(-2px); /* Pequeño movimiento */
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center; /* Centra las pestañas */
+    padding: 10px;
+    background-color: #f0f0f0; /* Fondo del contenedor */
+    border-radius: 8px;
+}
+
+/* 2. Estilos Base de las Pestañas */
+.tab-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff; /* Color de texto blanco por defecto */
+    border-radius: 6px;
+    font-weight: bold;
+    /* Transición suave para el efecto de activo */
+    transition: all 0.3s ease; 
+    /* Las pestañas no activas están ligeramente abajo */
+    transform: translateY(0); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Estilos de los Iconos */
+.tab-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 8px;
+}
+
+/* 4. Colores Únicos para Cada Casilla */
+
+.tab-ropa {
+    background-color: #e74c3c; /* Rojo */
+}
+
+.tab-accesorios {
+    background-color: #3498db; /* Azul */
+}
+
+.tab-articulos {
+    background-color: #2ecc71; /* Verde */
+}
+
+.tab-contactos {
+    background-color: #9b59b6; /* Morado */
+}
+
+/* 5. Estilo para la Casilla Activa (Sobresalir) */
+
+.tab-button.active {
+    /* La pestaña activa "sobresale" al subir y tener más sombra */
+    transform: translateY(-5px); /* Sube 5px */
+    z-index: 10; /* Asegura que esté por encima de las demás */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    
+    /* Opcional: Agrandar ligeramente el padding */
+    padding: 12px 17px; 
+    
+    /* Opcional: Color de texto o borde de resaltado */
+    border: 2px solid #fff; 
+}
+/* Contenedor del contenido */
+.content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid #ddd; /* Separador visual del nav */
+}
+
+.content h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Estilos iniciales para los cuadros */
+.cuadro-personalizado {
+    /* Estilos base de los cuadros */
+    width: 200px; /* Ancho de ejemplo */
+    padding: 20px;
+    margin: 10px;
+    background-color: black; /* Color inicial negro (o el que desees) */
+    color: white; /* Color del texto para que se vea sobre el fondo negro */
+    text-align: center;
+    border: 15;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    cursor: pointer; /* Indica que es interactivo */
+    
+    /* Propiedad clave para animar suavemente los cambios */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Estilos al pasar el ratón (Hover) */
+.cuadro-personalizado:hover {
+    /* 1. Agrandar un poco (ejemplo: 10% más grande) */
+    /* 2. Rotar entre 5 y 10 grados (ejemplo: 7 grados) */
+    transform: scale(1.08) rotate(7deg); 
+    
+    /* 3. Cambiar el color de fondo */
+    background-color: #3333aa; /* Ejemplo: un color azul oscuro, cámbialo a tu gusto */
+    
+    /* Opcional: Cambiar el color del texto si es necesario */
+    color: #ffffff;
+}
+
+/* Estilo para el título negro dentro del cuadro */
+.cuadro-personalizado .titulo-negro {
+    /* Si el fondo del cuadro es negro, asegúrate de que el texto sea visible */
+    color: white; 
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilo para el contenido principal (main) */
+main {
+    /* Fondo blanco ya que es el contenido principal */
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    /* Para separar visualmente del resto del cuerpo */
+    border-top: 1px solid #EEEEEE;
+}
+
+main h2 {
+    color: #db294c; /* Color oscuro para el título principal */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la sección del slider */
+#slider {
+    /* Fondo negro con degradado azul celeste */
+    background: linear-gradient(#770d1e, #7a0a3a); /* Negro a gris oscuro a azul claro */
+    padding: 35px 0; /* Padding vertical para el contenido */
+    border-radius: 8px; /* Borde suave para el contenedor del slider */
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#slider h3 {
+    color: #FFFFFF; /* Título del slider en blanco */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de las imágenes para hacer el slider manual (scrollable) */
+#slider div {
+    display: flex; /* Para que las imágenes estén en fila */
+    overflow-x: auto; /* Permite el scroll horizontal manual */
+    /* Estilo para la barra de desplazamiento (opcional y varía según el navegador) */
+    padding: 10px 0; /* Espacio vertical para las imágenes */
+    scroll-snap-type: x mandatory; /* Para que se detenga en cada imagen */
+}
+
+/* Estilo para cada imagen dentro del slider */
+#slider img {
+    /* Las imágenes mantienen su tamaño intrínseco */
+    flex-shrink: 0; /* Evita que las imágenes se encojan */
+    margin: 0 15px; /* Espacio entre las imágenes */
+    scroll-snap-align: center; /* Alineación para el scroll-snap */
+    
+    /* Borde blanco de 2px con redondeado suave */
+    border: 5px solid #db294c; /* Borde blanco */
+    border-radius: 10px; /* Redondeado suave */
+    
+    /* Sombra para que destaque (opcional) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+    transition: transform 0.3s ease; /* Transición al interactuar (opcional) */
+}
+
+#slider img:hover {
+    transform: scale(1.03); /* Ligeramente más grande al pasar el ratón (opcional) */
+}
+
+/* Estilo para la cuarta sección */
+#acciones {
+    background-color: #FFFFFF; /* Mantiene el fondo blanco del 'main' */
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+
+#acciones h3 {
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+#acciones nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#acciones nav span {
+    color: #333333; /* Color del separador */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Estilo para los contenedores de los botones (los 'a') */
+#acciones nav a {
+    text-decoration: none;
+    position: relative; /* Esencial para posicionar la imagen oculta */
+    display: inline-block;
+}
+
+/* Estilo base de los botones */
+#acciones nav button {
+    /* Color negro con degradado verde */
+    background: linear-gradient(to right, #2e2e2e, #a3a3a3); /* Fondo oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 55px 20px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 5px solid #16090b; /* Borde negro de 2px */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+    /* Aplicar degradado verde en el fondo principal (simulación) */
+    background-image: linear-gradient(135deg, #181f25, #349fd1); /* Degradado de verde oscuro a verde brillante */
+    background-size: 100% 100%; /* Asegura que el degradado cubra el botón */
+}
+
+/* Imagen (simulada con un pseudo-elemento para mantener el código CSS puro, 
+   ya que la estructura HTML no incluye <img> dentro del <a> o <button>) */
+#acciones nav a::after {
+    content: "🎁"; /* Contenido de la imagen/icono */
+    /* Posicionamiento y estilo de la imagen/icono oculto */
+    position: absolute;
+    top: -60px; /* Posicionamiento encima del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 50px;
+    background-color: #ffffffe6;
+
+    padding: 15px 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none; /* No interfiere con el click del botón */
+    z-index: 10;
+}
+
+/* Efecto al pasar el ratón (hover) */
+#acciones nav a:hover button {
+    /* Degradado naranja con rojo-rosa */
+    background: linear-gradient(to right, #ff7b00, #f00726); /* Naranja a Rojo-Rosa */
+    color: #FFFFFF;
+    transform: translateY(-3px); /* Pequeño levantamiento */
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4); /* Sombra para resaltar */
+}
+
+/* Mostrar la imagen/icono al pasar el ratón (hover) */
+#acciones nav a:hover::after {
+    opacity: 1; /* Hace visible la "imagen" */
+    transform: translate(-50%, -10px); /* Ajuste de posición al aparecer */
+}
+
+/* Ajuste específico para el segundo botón si se quiere una imagen distinta */
+#acciones nav a:last-child::after {
+    content: "⭐"; /* Icono diferente para "Reseñar Producto" */
+}
+
+/* Estilo para la quinta sección: Galería */
+#galeria {
+    background-color: #F8F8F8; /* Un fondo ligeramente diferente para destacar */
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Título llamativo con letra sans-serif */
+#galeria h3 {
+    font-family: 'Verdana', 'Geneva', sans-serif; /* Fuente sans-serif llamativa */
+    font-size: 2.5em;
+    color: #6f1615;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de las imágenes de la galería */
+#galeria div {
+    display: grid;
+    /* Estructura de 3x3 (3 columnas) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 35px; /* Espacio entre las imágenes */
+    max-width: 800px; /* Limita el ancho del grid para mantener el formato 3x3 compacto */
+    margin: 0 auto; /* Centrar el grid */
+}
+
+/* Estilo para las imágenes */
+#galeria img {
+    width: 100%; /* Las imágenes ocupan todo el espacio de su celda */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacios extra debajo de las imágenes */
+    cursor: pointer; /* Indica que son clickeables */
+    
+    /* Borde negro con degradado azul marino */
+    border: 10px solid #000000; /* Borde negro base */
+    border-image: linear-gradient(12deg , #201b1d, #025880) 1; /* Degradado de azul marino */
+    border-radius: 25px;
+    border-image-slice: 1;
+    transform: rotate(2.5deg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el ratón para indicar que se puede elegir */
+#galeria img:hover {
+    transform: scale(1.05); /* Ligeramente más grande */
+    border-image: linear-gradient(to right, #df0055, #e23307) 1; /* Degradado de azul marino */
+    box-shadow: 0 0 15px rgba(0, 0, 128, 0.7); /* Sombra azul marino */
+    border-radius: 25px;
+
+}
+
+/* Eliminar el <br> que está en el HTML para usar el grid */
+#galeria br {
+    display: none;
+}
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.galeria-contenedor img {
+    cursor: pointer;
+    border: 1px solid #131313;
+    transition: opacity 0.3s;
+}
+
+.galeria-contenedor img:hover {
+    opacity: 0.8;
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DEL MODAL/POPUP */
+/* ------------------------------------------- */
+
+.modal {
+    /* Estado inicial: OCULTO */
+    visibility: hidden;
+    opacity: 0;
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 27, 44, 0.8); /* Fondo oscuro */
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Pseudo-selector MÁGICO: Cuando el #modal-popup es el destino (:target) */
+#modal-popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-contenido {
+    color: #000;
+    background-color: #fefefe;
+    margin: 10% auto; /* Centrado */
+    padding: 20px;
+    border:#000;
+    border-radius: 8px;
+    width: 80%; 
+    max-width: 500px; 
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.popup-imagen-estatica {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Botón de cerrar (la 'x') */
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #ffffff; /* Color blanco sobre el fondo oscuro del modal */
+    font-size: 55px;
+    font-weight: bold;
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    line-height: 1;
+}
+
+.cerrar:hover {
+    color: #01faed;
+}
+
+/* Estilos de botones (Comprar y Apartar) */
+.modal-acciones {
+    margin-top: 20px;
+}
+
+.modal-acciones button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar {
+    background-color: #1e962e;
+    color: white;
+}
+
+.btn-apartar {
+    background-color: #045bac;
+    color: white;
+}
+
+/* Estilo para el Footer (Sexta Sección) */
+footer {
+    /* Fondo color vino morado */
+    background-color: #100d2c; /* Un tono de vino morado profundo */
+    color: #f57600; /* Texto blanco para alto contraste */
+    padding: 20px 20px;
+    text-align: center;
+}
+
+/* Línea divisoria dentro del footer */
+footer hr {
+    border: none;
+    border-top: 5px solid #5d009b; /* Línea divisoria blanca suave */
+    margin: 0 0 20px 0;
+}
+
+/* Contenedor principal del footer para disposición */
+footer {
+    display: flex;
+    justify-content: space-around; /* Espacio entre los bloques */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
+}
+
+footer > div {
+    padding: 10px;
+    max-width: 45%;
+    min-width: 250px;
+    text-align: left;
+}
+
+/* Estilo para el texto de derechos de autor */
+footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Título de Redes Sociales */
+footer h3 {
+    color: #ff9011; /* Color rosa claro para destacar */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Estilo de los enlaces de Redes Sociales (las "imágenes" o iconos que llaman la atención) */
+footer a {
+    color: #ffffff; /* Enlace blanco por defecto */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover para que las redes sociales "llamen la atención" */
+footer a:hover {
+    background-color: #130036; /* Un color rosa vibrante */
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo para el separador "|" */
+footer span {
+    color: #FFC0CB; /* Separador en rosa claro */
+    margin: 0 50px;
+}
+
+/* Estilo para el párrafo de la nota (ocultarlo o atenuarlo) */
+footer p:last-child {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Asegura que la nota ocupe todo el ancho */
+}
+
+@media (max-width: 768px) {
+    /* * --- SECCIÓN 1: CABECERA (HEADER) ---
+     * Pila los elementos (logo, búsqueda, navegación) verticalmente.
+     */
+    .header-container {
+        flex-direction: column;
+        padding: 15px 10px; /* Ajuste de padding */
+    }
+
+    .header-logo-link img {
+        margin-right: 0;
+        margin-bottom: 10px; /* Espacio debajo del logo */
+    }
+
+    .header-search-container {
+        /* Ocupa todo el ancho disponible */
+        width: 100%; 
+        max-width: 100%;
+        margin: 10px 0; /* Espacio superior e inferior */
+        order: 3; /* Mueve la barra de búsqueda al final */
+    }
+
+    .header-nav {
+        /* Mueve la navegación al inicio o centro */
+        order: 1; 
+        margin-bottom: 15px; 
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* * --- SECCIÓN 2: INTRO BOUTIQUE ---
+     * Apila la imagen y el texto verticalmente.
+     */
+    .intro-boutique {
+        flex-direction: column;
+        margin: 30px 10px; /* Reduce el margen y añade padding lateral */
+        min-height: auto; /* Permite que la altura se ajuste al contenido */
+    }
+    
+    .intro-imagen-contenedor {
+        /* La imagen ocupa todo el ancho y una altura fija para que se vea */
+        width: 100%;
+        height: 300px; 
+    }
+    
+    .intro-texto-contenedor {
+        width: 100%;
+        padding: 10px; 
+    }
+
+    .intro-texto-caja-negra {
+        padding: 30px; /* Reduce el padding interno de la caja negra */
+        max-width: none; /* Permite que ocupe todo el ancho disponible */
+    }
+
+    .titulo-moderno {
+        font-size: 1.8em; /* Tamaño de título más pequeño */
+    }
+
+    .parrafo-moderno {
+        font-size: 1em; /* Ajuste de tamaño de párrafo */
+    }
+    
+    /* * --- SECCIÓN 3: PESTAÑAS (TABS) ---
+     * Permite que las pestañas se envuelvan.
+     */
+    .tabs-container {
+        flex-wrap: wrap; /* Permite que las pestañas se organicen en varias líneas */
+        padding: 10px 5px;
+    }
+    
+    .tab-button {
+        flex: 1 1 45%; /* Dos pestañas por fila (aproximadamente) */
+        margin: 5px; /* Espacio entre las pestañas */
+        justify-content: center; /* Centra el contenido dentro del botón */
+    }
+
+    .tab-button.active {
+         /* Asegura que el efecto de 'active' funcione bien en el scroll vertical */
+        transform: translateY(-2px); 
+    }
+    
+    /* * --- SECCIÓN 4: SLIDER DE IMÁGENES ---
+     * Asegura que el slider ocupe el ancho correctamente.
+     */
+    #slider {
+        padding: 20px 0;
+    }
+    
+    #slider div {
+        /* Ajustar el padding horizontal para el scroll visible */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #slider img {
+        /* Reduce el tamaño de las imágenes del slider para que quepan */
+        width: 70vw; /* El 70% del ancho de la ventana */
+        max-height: 200px; /* Altura máxima para evitar imágenes demasiado altas */
+        margin: 0 10px; 
+    }
+    
+    /* * --- SECCIÓN 5: ACCIONES (BOTONES GRANDES) ---
+     * Apila los botones verticalmente.
+     */
+    #acciones nav {
+        flex-direction: column;
+        gap: 40px; /* Aumenta el espacio vertical entre ellos */
+    }
+
+    #acciones nav span {
+        display: none; /* Oculta el separador vertical (|) */
+    }
+
+    #acciones nav button {
+        /* Los botones ocupan más ancho para ser fáciles de tocar */
+        width: 80vw;
+        font-size: 1.5em; /* Tamaño de fuente más pequeño */
+        padding: 40px 20px; /* Reduce el padding */
+    }
+    
+    /* Ajuste para el icono que aparece en hover */
+     #acciones nav a::after {
+        top: -50px; /* Sube un poco más */
+    }
+
+    /* * --- SECCIÓN 6: GALERÍA DE IMÁGENES (GRID) ---
+     * Cambia el grid de 3 columnas a 2 para móviles.
+     */
+    #galeria div {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 3 */
+        gap: 15px; /* Reduce el espacio */
+    }
+
+    #galeria h3 {
+        font-size: 2em;
+    }
+    
+    /* Ajuste de estilo del borde de la imagen en la galería */
+    #galeria img {
+        border-width: 5px; /* Borde más delgado */
+        transform: rotate(0deg); /* Quita la rotación para un diseño más limpio */
+    }
+
+    /* * --- SECCIÓN 7: MODAL/POPUP ---
+     * Ajustes para asegurar que el modal se vea bien.
+     */
+    .modal-contenido {
+        margin: 25% auto; /* Más arriba */
+        width: 90%; 
+    }
+
+    .cerrar {
+        top: 10px;
+        right: 15px;
+        font-size: 40px; /* Botón de cerrar más pequeño */
+    }
+
+    .modal-acciones {
+        display: flex; /* Mantiene los botones en fila */
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .modal-acciones button {
+        flex: 1 1 40%;
+        margin: 8px;
+    }
+    
+    /* * --- SECCIÓN 8: FOOTER (PIE DE PÁGINA) ---
+     * Apila las columnas del footer.
+     */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    footer > div {
+        max-width: 100%;
+        min-width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
